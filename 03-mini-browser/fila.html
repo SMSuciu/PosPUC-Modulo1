@@ -1,0 +1,53 @@
+<script>
+    console.log('[Filas/Queue]');//exibindo no console e nao no navegador
+     //Fila a ordem importa
+     //Primeiro a entrar é o primeiro a sair
+     //Qualquer tipo de dado
+
+     var fila = [
+        'script',
+        'style',
+        'imagem',
+     ];
+
+     console.log(fila);
+     
+     //fila.push('Botafogo.jpg') //Add um item no final da fila
+     //fila.shift(); //Remove o primeiro item da fila
+     // ========================= //
+     // Receita para criar filas //
+     // ======================= //
+     // - enqueue(enfileirar) / dequeue(desenfeleirar)
+    
+     // A ideia da implementacao é enfileirar os requests do navelador
+
+     class queue{  // Class é o Objeto com atributos e metodos.
+        
+        constructor(){
+            this.data = [];
+        }
+        print(){
+            console.log(this.data);
+        }
+
+        enqueue(item){
+            this.data.push(item);
+        }
+
+        dequeue(){
+            this.data.shift(); //Remove o primeiro item da fila
+        }
+     } 
+
+     var requests = new queue();
+     //Open( Abertopara extensao) Closed(Fechado para modificação)
+
+     requests.enqueue('script.js');
+     requests.print();
+     requests.dequeue();
+     requests.enqueue('style.css');
+     requests.enqueue('imagem.jpg');
+     requests.enqueue('Botafogo.jpg');
+     requests.print();
+     
+</script>

@@ -1,0 +1,36 @@
+<script>
+    console.log('Pilha/Stack');
+
+    class Pilha{
+        constructor(){
+            this.data = [];
+        }
+
+        imprimir(){
+            console.log(this.data);
+        }
+
+        empilhar(item){
+            this.data.push(item);
+        }
+
+        desempilhar(){
+            this.data.pop();
+        }
+
+        clear(){
+            this.data = [];
+        }
+    }
+
+    const pilhas = new Pilha();
+    pilhas.empilhar('Botafogo');
+    pilhas.empilhar('Niterói')
+    pilhas.empilhar('Corrida')
+
+    pilhas.imprimir();
+
+    pilhas.desempilhar();
+
+    pilhas.imprimir();
+</script>
